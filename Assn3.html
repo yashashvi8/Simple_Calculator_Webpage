@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+           text-align:center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    
+    <h1 style=" color:rgb(255, 115, 0);">Yashashvi's Simple Calculator</h1><br>
+    <img src=" https://png.pngtree.com/png-clipart/20210310/ourmid/pngtree-math-clipart-cartoon-calculator-symbol-png-image_2997371.jpg"
+    width="400"
+    height="300" ><br><br>
+    <label for="num1"><b>Enter a number:</label>
+    <input type="number" name="" id="first">
+    <br> <br>
+    <label for="num1";>Enter another number:</label>
+    <input type="number" name="" id="second"> <br><br>
+
+    <label >The answer is:- </label>
+    <fieldset id="ans"></fieldset> <br>
+
+    <button type="button" onclick="add()">Addition(+)</button>
+    <button type="button" onclick="sub()">Subtraction(-)</button>
+    <button type="button" onclick="mul()">Multiplication(x)</button>
+    <button type="button" onclick="div()">Division(÷)</button>
+    <br><br>
+    <select id="sele" onchange="select_Function(value)">
+        <option value="1">Addition</option>
+        <option value="2">Subtraction</option>
+        <option value="3">Multiplication</option>
+        <option value="4">Division</option>
+    </select>
+    <script>
+        function select_Function(v){
+            switch(v){
+                case 1:
+                  add()
+                  break;
+                
+                case 2:
+                  sub()
+                  break;
+                
+                case 3:
+                  mul()
+                  break;
+                
+                case 4:
+                  div()
+                  break;  
+                
+            }
+        }
+        function add(){
+            var x = parseInt(document.getElementById("first").value) + parseInt(document.getElementById("second").value);
+            document.getElementById("ans").innerHTML = x;
+        }
+
+        function sub(){
+            var x = parseInt(document.getElementById("first").value) - parseInt(document.getElementById("second").value);
+            document.getElementById("ans").innerHTML = x;
+        }
+
+        function mul(){
+            var x = parseInt(document.getElementById("first").value) * parseInt(document.getElementById("second").value);
+            document.getElementById("ans").innerHTML = x;
+        }
+
+        function div(){
+            var x = parseInt(document.getElementById("first").value) / parseInt(document.getElementById("second").value);
+            document.getElementById("ans").innerHTML = x;
+        }
+    </script>
+</body>
+</html>
